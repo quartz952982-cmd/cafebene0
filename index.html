@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/caffebeneheader.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/main4-product.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/index.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <img src="images/logo-image1.png" alt="Caffebene Logo" class="logo-center">
+      <a href="http://www.caffebene.co.kr/franchise/"><img src="images/call.png" class="logo-right"></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="http://www.caffebene.co.kr/caffebene/brand.html">ABOUT US</a>
+          <ul>
+            <li><a href="http://www.caffebene.co.kr/caffebene/brand.html">브랜드 스토리</a></li>
+            <li><a href="http://www.caffebene.co.kr/caffebene/bean.html">카페베네 원두</a></li>
+            <li><a href="http://www.caffebene.co.kr/caffebene/news_list.html">카페베네 소식</a></li>
+          </ul>
+        </li>
+        <li><a href="http://www.caffebene.co.kr/menu/index.html">MENU</a>
+          <ul>
+            <li><a href="http://www.caffebene.co.kr/menu/menu_list.html?code=001000">커피</a></li>
+            <li><a href="http://www.caffebene.co.kr/menu/menu_list.html?code=002000">음료</a></li>
+            <li><a href="http://www.caffebene.co.kr/menu/menu_list.html?code=003000">푸드</a></li>
+            <li><a href="http://www.caffebene.co.kr/menu/menu_list.html?code=004000">MD상품</a></li>
+          </ul>
+        </li>
+        <li><a href="http://www.caffebene.co.kr/contents/content_list.html#1_0">CONTENTS</a>
+          <ul>
+            <li><a href="http://www.caffebene.co.kr/contents/content_list.html?code=013005#1_0">이벤트</a></li>
+            <li><a href="http://www.caffebene.co.kr/contents/content_list.html?code=013006#1_0">매장</a></li>
+          </ul>
+        </li>
+        <li><a href="http://www.caffebene.co.kr/membership/grade.html">MEMBERSHIP</a>
+          <ul>
+            <li><a href="http://www.caffebene.co.kr/membership/grade.html">등급&혜택</a></li>
+            <li><a href="http://www.caffebene.co.kr/membership/guide.html">가입방법안내</a></li>
+            <li><a href="http://www.caffebene.co.kr/membership/service.html">서비스</a></li>
+            <li><a href="http://www.caffebene.co.kr/membership/faq.html">FAQ</a></li>
+          </ul>
+        </li>
+        <li><a href="http://www.caffebene.co.kr/store/local.html">STORE</a>
+          <ul>
+            <li><a href="http://www.caffebene.co.kr/store/local.html">국내</a></li>
+            <li><a href="http://www.caffebene.co.kr/store/global.html">해외</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="main1">
+    <div class="swiper section1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="main1-img1" style="width: 100%; display: inline-block;"><img class="img1"
+              src="images/main1-banner1.jpg" alt="딸기배너" width="100%" height="650px">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="main1-img2" style="width: 100%; display: inline-block;">
+            <img src="images/main1-banner2.jpg" alt="초코배너" width="100%" height="650px">
+          </div>
+        </div>
+      </div>
+      <!-- <div class="sw-next">
+        <img src="images/nextbtn.png" alt="btn" width="50px">
+      </div>
+      <div class="sw-prev">
+        <img src="images/prevbtn.svg" alt="prevbtn" width="50px">
+      </div> -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <main class="main2">
+    <section class="section2">
+      <div class="newbutton">
+        <button id="btn-new" class="active">신메뉴</button>
+        <button id="btn-best" class="inactive">베스트</button>
+      </div>
+      <div id="swiper-prev" class="swiper-button-prev"></div>
+      <div id="swiper-next" class="swiper-button-next"></div>
+
+      <!-- 신메뉴 슬라이드 -->
+      <!-- 신메뉴 슬라이드 -->
+      <div class="swiper menu1 slide-area" data-aos="fade-up" id="slide-new">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="images/newmenu3.png" alt="" />
+            </div>
+            <p>딸기 커피쿠키 프라페노 with <br />Biscoff<b>&reg;</b></p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="images/newmenu4.png" alt="" />
+            </div>
+            <p>딸기 우유 프라페노</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="images/newmenu5.png" alt="" />
+            </div>
+            <p>생딸기 라떼</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="images/newmenu6.png" alt="" />
+            </div>
+            <p>생딸기 주스</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="images/newmenu1.png" alt="" />
+            </div>
+            <p>생딸기 순수우유 케이크</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="images/newmenu2.png" alt="" />
+            </div>
+            <p>딸기 생크림 케이크</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 베스트 슬라이드 -->
+      <div class="swiper menu2 slide-area hidden" id="slide-best">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="images/bestmenu2.png" alt="" />
+            </div>
+            <p>메리 티라미수 라떼 <br />(ICED)</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="images/bestmenu3.png" alt="" />
+            </div>
+            <p>메리 티라미수 라떼 <br />(HOT)</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="images/bestmenu4.png" alt="" />
+            </div>
+            <p>피스타치오 크림 모카 <br />(ICED)</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="images/bestmenu5.png" alt="" />
+            </div>
+            <p>피스타치오 크림 모카 <br />(HOT)</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="images/bestmenu6.png" alt="" />
+            </div>
+            <p>문경 오미자 뱅쇼 <br />(HOT)</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="images/bestmenu1.png" alt="" />
+            </div>
+            <p>더블 초콜릿 케이크</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="swiper section4-1">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/event-banner1.png" alt=""></div>
+      <div class="swiper-slide">
+        <img src="images/event-banner2.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/event-banner3.png" alt="">
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="main4">
+    <h1>PRODUCTS</h1>
+    <div class="inner">
+      <div class="swiper section4">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#"><img src="images/product1.png" alt="">
+              <div class="text">
+                <p>베네캣 장우산</p>
+                <p>16,000원</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide"><a href="#" class="best"><img src="images/product2.png" alt="">
+              <div class="text">
+                <p>베네캣 스텐머그</p>
+                <p>22,000원</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide"><a href="#"><img src="images/product3.png" alt="">
+
+              <div class="text">
+                <p>캡슐 텀블러 화이트</p>
+                <p>19,000원</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide"><a href="#"><img src="images/product4.png" alt="">
+
+              <div class="text">
+                <p>캡슐 텀블러 블루</p>
+                <p>19,000원</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide"><a href="#" class="new"><img src="images/product5.png" alt="">
+
+              <div class="text">
+                <p>베네 홀리데이 키트</p>
+                <p>21,900원</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide"><a href="#"><img src="images/product6.png" alt="">
+
+              <div class="text">
+                <p>유리 티 머그</p>
+                <p>12,500원</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide"><a href="#"><img src="images/product7.png" alt="">
+
+              <div class="text">
+                <p>베네캣 베네찌</p>
+                <p>3,500원</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide"><a href="#"><img src="images/product8.png" alt="">
+
+              <div class="text">
+                <p>카푸치노잔 세트</p>
+                <p>12,000원</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide"><a href="#"><img src="images/product9.png" alt="">
+
+              <div class="text">
+                <p>베네캣 머그</p>
+                <p>13,000원</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide"><a href="#"><img src="images/product10.png" alt="">
+
+              <div class="text">
+                <p>베네브루 선물세트</p>
+                <p>29,000원</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="button">
+      <a href="#" class="button">더보기</a>
+    </div>
+  </div>
+  <div class="main5">
+    <p class="main5-title">
+      매장 위치를 검색해보세요</p>
+    <form action="#" method="post">
+      <input placeholder="내 주변 매장 찾기" type="search" id="search" name="search" class="search">
+    </form>
+    <div class="main5-img-wrap">
+      <div class="main5-1img">
+        <img src="images/daejeon.jpg" alt="대전점" width="500px" class="main5-img">
+        <div class="main5-box">
+          <p class="main5-box-title">대전태평점</p>
+          <p class="main5-box-sub">대전 중구 계백로 1565번길 20</p>
+        </div>
+      </div>
+      <div class="main5-1img">
+        <img src="images/dongdaegu.jpg" alt="동대구점" width="500px" class="main5-img">
+        <div class="main5-box">
+          <p class="main5-box-title">동대구역사점</p>
+          <p class="main5-box-sub">대구 동구 동대구로 550 3층 맞이방</p>
+        </div>
+      </div>
+      <div class="main5-1img">
+        <img src="images/nonhyeon.jpg" alt="논현점" width="500px" class="main5-img">
+        <div class="main5-box">
+          <p class="main5-box-title">논현역점</p>
+          <p class="main5-box-sub">서울 강남구 강남대로 556 논현빌딩 1층</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="caffebene-footer">
+    <!-- 왼쪽 고양이 이미지 -->
+    <div class="footer-left">
+      <img src="images/cat2.png" alt="왼쪽 고양이 이미지">
+    </div>
+
+    <!-- 가운데 텍스트 및 SNS -->
+    <div class="footer-center">
+      <p class="address">
+        경기도 파주시 월롱면 흥락로 129, 5동 |
+        <a href="#">오시는 길</a> |
+        <a href="#">제휴문의</a> |
+        <a href="#">이용약관</a> |
+        <a href="#">개인정보처리방침</a> |
+        대표이사 박그레타 |
+        사업자등록번호 206-86-29161 |
+        고객센터 1688-4666
+      </p>
+      <p class="copyright">
+        Copyright© by Caffebene, All rights reserved.
+      </p>
+    </div>
+    <div class="footer-right">
+      <div class="sns-icons">
+        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="images/blog.png" alt="Blog"></a>
+        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+        <a href="#"><img src="images/app.png" alt="App"></a>
+      </div>
+        <div class="gotop"></div>
+    </div>
+  </footer>
+
+  <script>
+    var swiper = new Swiper(".section1", {
+      cssMode: true,
+      navigation: {
+        nextEl: ".sw-next",
+        prevEl: ".sw-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      // mousewheel: true,
+      keyboard: true,
+      loop: true,
+      autoplay: true,
+      speed: 300,
+    });
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    const btnNew = document.getElementById("btn-new");
+    const btnBest = document.getElementById("btn-best");
+
+    const slideNew = document.getElementById("slide-new");
+    const slideBest = document.getElementById("slide-best");
+
+    // Swiper 두 개 생성
+    const swiper1 = new Swiper(".menu1", {
+      slidesPerView: 3,
+      navigation: {
+        nextEl: "#swiper-next",
+        prevEl: "#swiper-prev",
+      },
+    });
+
+    const swiper2 = new Swiper(".menu2", {
+      slidesPerView: 3,
+      navigation: {
+        nextEl: "#swiper-next",
+        prevEl: "#swiper-prev",
+      },
+    });
+
+    // 신메뉴 버튼 클릭
+    btnNew.addEventListener("click", () => {
+      btnNew.classList.add("active");
+      btnNew.classList.remove("inactive");
+
+      btnBest.classList.remove("active");
+      btnBest.classList.add("inactive");
+
+      slideNew.classList.remove("hidden");
+      slideBest.classList.add("hidden");
+    });
+
+    // 베스트 버튼 클릭
+    btnBest.addEventListener("click", () => {
+      btnBest.classList.add("active");
+      btnBest.classList.remove("inactive");
+
+      btnNew.classList.remove("active");
+      btnNew.classList.add("inactive");
+
+      slideBest.classList.remove("hidden");
+      slideNew.classList.add("hidden");
+    });
+  </script>
+  <script>
+    var swiper = new Swiper(".section4-1", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: true,
+      loop: true,
+    });
+  </script>
+  <script>
+    var swiper = new Swiper(".section4", {
+      slidesPerView: 5,
+      spaceBetween: 30,
+      freeMode: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 1,
+        disableOnlnteraction: false,
+      },
+      loop: true,
+      speed: 5000,
+    });
+  </script>
+  <script>
+    AOS.init({
+      duration: 3000,
+    });
+  </script>
+</body>
+
+</html>

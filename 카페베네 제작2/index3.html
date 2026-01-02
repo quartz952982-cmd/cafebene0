@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style3.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <main class="main2">
+    <section class="section2">
+      <div class="newbutton">
+        <button id="btn-new" class="active">신메뉴</button>
+        <button id="btn-best" class="inactive">베스트</button>
+      </div>
+      <div id="swiper-prev" class="swiper-button-prev"></div>
+      <div id="swiper-next" class="swiper-button-next"></div>
+
+      <!-- 신메뉴 슬라이드 -->
+      <!-- 신메뉴 슬라이드 -->
+      <div class="swiper menu1 slide-area" id="slide-new">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="images/newmenu3.png" alt="" />
+            </div>
+            <p>딸기 커피쿠키 프라페노 with <br />Biscoff<b>&reg;</b></p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="images/newmenu4.png" alt="" />
+            </div>
+            <p>딸기 우유 프라페노</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="images/newmenu5.png" alt="" />
+            </div>
+            <p>생딸기 라떼</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="image/newmenu6.png" alt="" />
+            </div>
+            <p>생딸기 주스</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="image/newmenu1.png" alt="" />
+            </div>
+            <p>생딸기 순수우유 케이크</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="image/newmenu2.png" alt="" />
+            </div>
+            <p>딸기 생크림 케이크</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 베스트 슬라이드 -->
+      <div class="swiper menu2 slide-area hidden" id="slide-best">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="image/bestmenu2.png" alt="" />
+            </div>
+            <p>메리 티라미수 라떼 <br />(ICED)</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="image/bestmenu3.png" alt="" />
+            </div>
+            <p>메리 티라미수 라떼 <br />(HOT)</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="image/bestmenu4.png" alt="" />
+            </div>
+            <p>피스타치오 크림 모카 <br />(ICED)</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="image/bestmenu5.png" alt="" />
+            </div>
+            <p>피스타치오 크림 모카 <br />(HOT)</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="image/bestmenu6.png" alt="" />
+            </div>
+            <p>문경 오미자 뱅쇼 <br />(HOT)</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="image/bestmenu1.png" alt="" />
+            </div>
+            <p>더블 초콜릿 케이크</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    const btnNew = document.getElementById("btn-new");
+    const btnBest = document.getElementById("btn-best");
+
+    const slideNew = document.getElementById("slide-new");
+    const slideBest = document.getElementById("slide-best");
+
+    // Swiper 두 개 생성
+    const swiper1 = new Swiper(".menu1", {
+      slidesPerView: 3,
+      navigation: {
+        nextEl: "#swiper-next",
+        prevEl: "#swiper-prev",
+      },
+    });
+
+    const swiper2 = new Swiper(".menu2", {
+      slidesPerView: 3,
+      navigation: {
+        nextEl: "#swiper-next",
+        prevEl: "#swiper-prev",
+      },
+    });
+
+    // 신메뉴 버튼 클릭
+    btnNew.addEventListener("click", () => {
+      btnNew.classList.add("active");
+      btnNew.classList.remove("inactive");
+
+      btnBest.classList.remove("active");
+      btnBest.classList.add("inactive");
+
+      slideNew.classList.remove("hidden");
+      slideBest.classList.add("hidden");
+    });
+
+    // 베스트 버튼 클릭
+    btnBest.addEventListener("click", () => {
+      btnBest.classList.add("active");
+      btnBest.classList.remove("inactive");
+
+      btnNew.classList.remove("active");
+      btnNew.classList.add("inactive");
+
+      slideBest.classList.remove("hidden");
+      slideNew.classList.add("hidden");
+    });
+  </script>
+</body>
+
+</html>

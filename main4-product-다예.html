@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main4-product.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="main4">
+        <h1>PRODUCTS</h1>
+        <div class="inner">
+            <div class="swiper section4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#"><img src="images/product1.png" alt="">
+                            <div class="text">
+                                <p>베네캣 장우산</p>
+                                <p>16,000원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide"><a href="#" class="best"><img src="images/product2.png" alt="">
+                            <div class="text">
+                                <p>베네캣 스텐머그</p>
+                                <p>22,000원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide"><a href="#"><img src="images/product3.png" alt="">
+
+                            <div class="text">
+                                <p>캡슐 텀블러 화이트</p>
+                                <p>19,000원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide"><a href="#"><img src="images/product4.png" alt="">
+
+                            <div class="text">
+                                <p>캡슐 텀블러 블루</p>
+                                <p>19,000원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide"><a href="#" class="new"><img src="images/product5.png" alt="">
+
+                            <div class="text">
+                                <p>베네 홀리데이 키트</p>
+                                <p>21,900원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide"><a href="#"><img src="images/product6.png" alt="">
+
+                            <div class="text">
+                                <p>유리 티 머그</p>
+                                <p>12,500원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide"><a href="#"><img src="images/product7.png" alt="">
+
+                            <div class="text">
+                                <p>베네캣 베네찌</p>
+                                <p>3,500원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide"><a href="#"><img src="images/product8.png" alt="">
+
+                            <div class="text">
+                                <p>카푸치노잔 세트</p>
+                                <p>12,000원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide"><a href="#"><img src="images/product9.png" alt="">
+
+                            <div class="text">
+                                <p>베네캣 머그</p>
+                                <p>13,000원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide"><a href="#"><img src="images/product10.png" alt="">
+
+                            <div class="text">
+                                <p>베네브루 선물세트</p>
+                                <p>29,000원</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="button">
+            <a href="#" class="button">더보기</a>
+        </div>
+    </div>
+    <script>
+        var swiper = new Swiper(".section4", {
+            slidesPerView: 5,
+            spaceBetween: 30,
+            freeMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 1,
+                disableOnlnteraction: false,
+            },
+            loop: true,
+            speed: 1500,
+        });
+    </script>
+</body>
+
+</html>

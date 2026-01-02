@@ -1,0 +1,769 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('../images/cursor1.png') 2 2, auto !important;
+}
+
+*:active {
+    cursor: url('../images/cursor2.png') 2 2, auto !important; 
+}
+
+
+@font-face {
+    font-family: 'Gyeombalbal';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/insungitCutelivelyjisu.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+header img {
+    display: block;
+    margin: 0 auto;
+}
+
+header nav.on {
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 999;
+    background-color: white;
+}
+
+header .logo-center {
+    width: 200px;
+}
+
+header .logo-right {
+    width: 70px;
+}
+
+/* 전체 ul 스타일 */
+header ul {
+    list-style: none;
+    text-align: center;
+    font-family: 'Gyeombalbal';
+
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+
+header nav {
+    padding-top: 20px;
+    padding-bottom: 10px ;
+    width: 100%;
+}
+
+/* 네비게이션 메뉴 설정 */
+header nav > ul {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header nav > ul > li {
+    width: 240px;
+    position: relative;
+    font-weight: 700;
+    
+}
+
+.headermenu {
+    text-decoration: none;
+}
+
+header > nav > ul > li > a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    
+}
+
+header > nav > ul > li > a:hover {
+    color: #3dc7be; /* 민트색 (필요시 색상 조정 가능) */
+    text-decoration: underline; /* 밑줄 효과 */
+    text-underline-offset: 3px; /* 밑줄과 텍스트 간격 */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* 드롭다운 메뉴 스타일 */
+header > nav > ul ul {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-out, visibility 0.3s;
+}
+
+header > nav > ul > li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+header > nav > ul ul {
+    border-radius: 10px;    
+    background-color: white;
+}
+
+header > nav > ul ul li a {
+    display: block;
+    padding: 10px;
+    line-height: 35px;
+    font-size: 16px;
+    font-family: 'Gyeombalbal';
+    font-weight: 500;
+}
+
+header > nav > ul ul li a:hover {
+    color: #00A5B1;
+}
+
+/* 헤더에서 이미지 배치 스타일 */
+header {
+    width: 100%;
+    position: relative;
+    /* background-color: #fff; */
+    /* position: fixed; */
+    padding-top: 30px;
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 123px; /* 헤더 높이 설정 */
+}
+
+/* 첫 번째 이미지 중앙 배치 */
+.logo-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 두 번째 이미지 오른쪽 끝 배치 */
+.logo-right {
+    position: absolute;
+    right: 50px; /* 오른쪽 끝에 배치 */
+    top: 50%; /* 상단 50% 위치 */
+    transform: translateY(-50%); /* 세로 중앙 정렬 */
+    max-height: 80%; /* 이미지 크기 조정: 80%로 줄여서 잘림 방지 */
+    border-radius: 10px;
+}
+
+.main1 {
+    margin-top: 20px;
+    position: relative;
+    height: 650px;
+}
+
+.section1 .swiper-pagination {
+    position: absolute;
+}
+
+.section1 .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 60px;
+}
+
+.section1 .swiper-pagination-bullet-active {
+    width: 30px;
+    height: 10px;
+    border-radius: 60px;
+    background-color: #fff;
+}
+
+/* .section1 .swiper-slide .main-img1 {
+    width: 300px;
+    display: inline;
+} */
+
+
+/* .sw-next {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 0 14px;
+    padding-top: 14px;
+    background-color: #ffffff1a;
+    top: 50%;
+    right: 90px;
+    transform: translateY(-50%);
+    z-index: 9;
+    }
+
+.sw-prev {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 0 14px;
+    padding-top: 14px;
+    background-color: #ffffff1a;
+    top: 50%;
+    left: 90px;
+    transform: translateY(-50%);
+    z-index: 9;
+    } */
+.mouse {
+    width: 70px;
+    height: 120px;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 9;
+    bottom: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mouse img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 은진 main5 */
+
+.main5 {
+    margin: 50px 0 60px 0;
+    background-color: #edf5f4;
+    padding: 50px 0 100px 0;
+}
+
+.main5-title {
+    font-family: 'Gyeombalbal';
+    font-size: 2rem;
+    padding: 50px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main5-1img1,
+.main5-1img2,
+.main5-1img3 {
+    display: inline-block;
+}
+
+.main5-img-wrap {
+    display: flex;
+    justify-content: space-around;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.main5 .search {
+    width: 500px;
+    height: 60px;
+    border-radius: 50px;
+    border: none;
+    background-color: #fff;
+    margin: 20px 0 80px 0;
+    outline: none;
+    padding-left: 50px;
+}
+
+.main5 .search::placeholder {
+    font-size: 1.2rem;
+    color: #bbb;
+    font-family: 'Gyeombalbal';
+}
+
+.search:hover {
+    outline: 3px solid #00A5B1;
+}
+
+.search-icon {
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+
+.main5 .main5-img {
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.main5-img-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.main5-1img {
+    position: relative;
+    overflow: hidden;
+}
+
+.main5-box {
+    position: absolute;
+    top: 510px;
+    left: 0;
+    width: 500px;
+    height: 150px;
+    background-color: #534c4c90;
+    border-radius: 0 0 50px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all .5s;
+}
+
+.main5-box-title,
+.main5-box-sub {
+    color: #fff;
+
+}
+
+.main5-box-title {
+    font-size: 28px;
+    text-align: center;
+    padding-top: 15px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-family: 'Gyeombalbal';
+}
+
+.main5-box-sub {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Gyeombalbal';
+}
+
+.main5-1img:hover .main5-box {
+    top: 350px;
+
+}
+
+/* 유경 section2 */
+/* section2 영역 스타일 */
+.section2 {
+  width: 100%;
+  /* height: 100vh; */
+  margin: 0 auto;
+  position: relative;
+  padding-top: 1px;
+  font-family: 'Gyeombalbal';
+}
+
+.section2 > .newbutton {
+  margin: 180px 0 80px 0;
+  text-align: center;
+  position: relative;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+}
+
+.section2 > .newbutton > button:nth-child(1),
+.section2 > .newbutton > button:nth-child(2) {
+  width: 160px;
+  margin: 0 5px;
+  line-height: 70px;
+  border-radius: 60px;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* 버튼 기본 색상 */
+.section2 > .newbutton > button:nth-child(1) {
+  background-color: #00A5B1;
+  color: white;
+    font-family: 'Gyeombalbal';
+}
+
+.section2 > .newbutton > button:nth-child(2) {
+  background-color: #B5B3B3;
+  color: #EFEFEF;
+    font-family: 'Gyeombalbal';
+}
+
+/* 버튼 활성화 스타일 */
+.section2 > .newbutton > button.active {
+  background-color: #00A5B1 !important;
+  color: white !important;
+}
+
+/* 버튼 비활성화 스타일 */
+.section2 > .newbutton > button.inactive {
+  background-color: #B5B3B3 !important;
+  color: #EFEFEF !important;
+}
+
+/* 슬라이드 영역 스타일 */
+.section2 .menu1 {
+ width: 80%;
+ height: 670px;
+  overflow: hidden; /* 부모에서 잘리지 않도록 */
+  position: relative;
+  margin: 0 auto;
+}
+.section2 .swiper-wrapper {
+  overflow: visible; /* 호버 확대 시 slide 내부 이미지가 잘리지 않도록 */
+}
+
+/* 숨김 처리 */
+.section2 .hidden {
+  display: none;
+}
+
+/* 화살표 위치 */
+.section2 .swiper-button-prev,
+.section2 .swiper-button-next {
+  position: absolute;
+  top: 60%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.section2 .swiper-button-prev {
+  left: 100px; /* 좌우 간격 */
+}
+
+.section2 .swiper-button-next {
+  right: 100px;
+}
+
+/* 화살표 아이콘 색상 지정 */
+.section2 .swiper-button-prev::after,
+.section2 .swiper-button-next::after {
+  font-size: 40px;
+  color: #A2A2A2;
+}
+
+/* 슬라이드 개별 아이템 */
+.section2 .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* 호버 시 확대 잘리지 않도록 */
+}
+
+/* 이미지 wrapper 추가 */
+.section2 .img-wrapper {
+  width: 421px;
+  height: 421px;
+  border-radius: 50%;
+  background-color: rgba(217, 188, 188, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: visible; /* 확대 시 잘리지 않도록 */
+}
+.menu1 .swiper-slide.swiper-slide-next .img-wrapper {
+  background-color: rgba(217, 188, 188, 0.9);
+}
+.menu2 .swiper-slide.swiper-slide-next .img-wrapper {
+  background-color: rgba(188, 217, 213, 0.9);
+}
+/* 이미지 자체 스타일 */
+.section2 .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* 호버 시 이미지와 배경 확대 */
+.section2 .swiper-slide:hover .img-wrapper img {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 슬라이드 텍스트 스타일 */
+.section2 .swiper-slide > p {
+  text-align: center;
+  padding: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  height: 192px;
+}
+
+.section2 .swiper-slide p > b {
+  font-size: 30px;
+  margin-left: 2px;
+  vertical-align: middle;
+}
+
+/* 메뉴2 배경 색상 다르게 */
+.section2 .menu2 .img-wrapper {
+  background-color: rgba(188, 217, 213, 0.5);
+}
+
+.section2 .menu2 {
+   width: 80%;
+ height: 670px;
+  overflow: hidden; /* 부모에서 잘리지 않도록 */
+  position: relative;
+  margin: 0 auto;
+}
+
+.section4-1 {
+  width: 100%;
+  margin: 60px 0;
+}
+
+.section4-1 .swiper-slide {
+  background-color: #eee;
+  height: 100%;
+}
+
+.section4-1 .swiper-pagination {
+    display: none;
+}
+
+.section4-1 .swiper-button-next {
+    display: none;
+}
+.section4-1 .swiper-button-prev {
+    display: none;
+}
+
+.section4-1 .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.main4 {
+    width: 100%;
+    height: 920px;
+}
+
+.main4 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.main4 h1 {
+    font-family: 'Gyeombalbal';
+    text-align: center;
+    font-size: 64px;
+    padding-top: 118px;
+    margin-bottom: 85px;
+}
+
+.main4 .inner {
+    font-family: 'Gyeombalbal';
+    line-height: 25px;
+}
+
+.main4 .swiper-slide .text {
+    text-align: center;
+    padding-top: 18px;
+}
+
+
+.section4 {
+    width: 100%;
+    height: 424px;
+    margin-left: 23px;
+    margin-bottom: 60px;
+    overflow: visible;
+}
+.section4 .swiper-slide a {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.section4 .swiper-pagination {
+    display: none;
+}
+
+
+.main4 .button a {
+    text-decoration: none;
+    color: #00A5B1;
+    border: 3px solid #00A5B1;
+    font-size: 20px;
+    border-radius: 73px;
+    display: inline-block;
+    width: 100px;
+    line-height: 50px;
+        font-family: 'Gyeombalbal';
+}
+
+
+.main4 .button a:hover {
+    background-color: #00A5B1;
+    color: white;
+}
+
+.main4 .button {
+    text-align: center;
+}
+
+.main4 .section4 .swiper-wrapper {
+    transition-timing-function : linear;
+}
+
+.main4 .swiper-slide:hover img {
+    transform: scale(1.05);
+}
+
+.main4 .swiper-slide .best {
+    position: relative;
+    display: block;
+}
+
+.main4 .swiper-slide .best::after {
+    content: "";
+    position: absolute;
+    background: url(../images/BEST.png) no-repeat center/contain;
+    width: 74px;
+    height: 74px;
+    top: -30px; left: -20px;
+}
+
+.main4 .swiper-slide .new::after {
+    content: "";
+    position: absolute;
+    background: url(../images/NEW.png) no-repeat center/contain;
+    width: 74px;
+    height: 74px;
+    top: -30px; left: -20px;
+}
+
+
+.caffebene-footer {
+    display: flex;
+    justify-content: space-between; /* 가로로 요소들을 배치 */
+    align-items: center; /* 세로로 가운데 정렬 */
+    background-color: #fff;
+    padding: 20px 50px;
+    position: relative;
+    height: 200px; /* 푸터의 높이를 설정 */
+}
+
+footer .gotop {
+    border-radius: 50%;
+    position: fixed;
+    bottom: 50px; right: 30px;
+    z-index: 999;
+    box-shadow: 2px 3px 5px 5px rgba(0, 0, 0, 0.1);
+    background:#fff url('../images/gotop9.png') no-repeat center 5px/50px;
+    width: 70px;
+    height: 70px;
+    border: 5px solid #00a5b1;
+    cursor: pointer;
+}
+
+
+/* 왼쪽 영역 (고양이 이미지) */
+.footer-left {
+    display: flex;
+    align-items: center; /* 세로 가운데 정렬 */
+}
+
+.footer-left img {
+    width: 200px; /* 이미지 크기 조정 */
+    height: auto;
+}
+
+/* 중앙 영역 (주소 및 저작권) */
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 세로로 가운데 정렬 */
+    align-items: center;
+    text-align: center;
+    max-width: 932px;
+    height: 100%; /* 세로 크기를 부모에 맞게 조정 */
+}
+
+.footer-center .address {
+    font-size: 12px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.footer-center .address a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 12px;
+}
+
+.footer-center .address a:hover {
+    text-decoration: underline;
+}
+
+.footer-center .copyright {
+    font-size: 12px;
+    color: #999;
+    margin: 5px 0 10px;
+}
+
+/* 오른쪽 영역 (소셜 아이콘) */
+.footer-right {
+    display: flex;
+    align-items: center; /* 세로 가운데 정렬 */
+}
+
+.sns-icons {
+    display: flex;
+    justify-content: center; /* 소셜 아이콘 중앙 정렬 */
+}
+
+.sns-icons a {
+    display: inline-block;
+    margin: 0 8px; /* 아이콘 간격 */
+}
+
+.sns-icons img {
+    width: 26px;
+    height: 26px;
+}
+
+/* 반응형 조정: 모바일 화면에서는 한 줄로 정렬 */
+@media (max-width: 768px) {
+    .caffebene-footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px; /* 모바일에서 간격 좁힘 */
+        height: auto; /* 모바일에서 푸터 높이를 자동으로 설정 */
+    }
+
+    .footer-left {
+        display: none; /* 모바일에서는 고양이 이미지를 숨김 */
+    }
+
+    .footer-center {
+        max-width: 90%; /* 화면에 맞게 중앙 영역 확장 */
+    }
+
+    .sns-icons {
+        margin-top: 20px; /* 소셜 아이콘 위쪽 간격 */
+    }
+}
+
+
